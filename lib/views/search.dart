@@ -16,7 +16,7 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   TextEditingController searchController=new TextEditingController();
   List<WallpaperModel> wallpapers=new List();
-
+//function for getting search wallpaper
   getSearchWallpapers(String query) async{
     var response=await http.get("https://api.pexels.com/v1/search?query=$query&per_page=80",headers: {
       "Authorization": api_key});
